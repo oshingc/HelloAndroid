@@ -1,5 +1,6 @@
 package com.example.oshin.helloandroid;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.os.Bundle;
@@ -13,6 +14,10 @@ public class MainActivity extends Activity {//ActionBarActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);//agrega un layout
+
+        DbHelper helper = new DbHelper(this);
+        SQLiteDatabase db = helper.getWritableDatabase();
+        
     }
 
 
