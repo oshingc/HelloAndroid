@@ -12,22 +12,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="toggleMenu"
-        android:text="Inicio" />
+        android:text="Inicio"
+        android:drawableLeft="@drawable/ic_home"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="toggleMenu"
-        android:text="Perfil" />
+        android:text="Perfil"
+        android:drawableLeft="@drawable/ic_pages"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="toggleMenu"
-        android:text="Ejercicios" />
+        android:text="Ejercicios"
+        android:drawableLeft="@drawable/ic_people"/>
 
 </LinearLayout>
 
+<!--getChild(1)-->
 <LinearLayout
 xmlns:android="http://schemas.android.com/apk/res/android"
 android:layout_width="match_parent"
@@ -36,11 +40,12 @@ android:background="#888888"
 android:orientation="vertical"
 android:gravity="center" >
 
+    <!--
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="@string/lorem_ipsum"
-    />
+    android:onClick="toggleMenu"/>-->
     <!--
     android:text="@string/lorem_ipsum"-->
 

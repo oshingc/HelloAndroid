@@ -22,6 +22,12 @@
 
         </activity>
 
+        <activity
+            android:name=".CreateUserActivity" >
+
+        </activity>
+
+
     </application>
 
 </manifest>
