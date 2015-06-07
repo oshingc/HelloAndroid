@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HelloAndroid</string>
+    <string name="app_name">Ever Code</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -28,5 +28,11 @@
     <string name="l_create_pass">Contraseña: </string>
     <string name="l_repeat_pass">Repetir Contraseña: </string>
 
+    <string name="username_hint">Usuario</string>
+
+    <string name="password_hint">Contraseña</string>
+    <string name="link_create_account">
+        <a ref="http://www.google.com.pe">Crear Cuenta</a>
+    </string>
 
 </resources>

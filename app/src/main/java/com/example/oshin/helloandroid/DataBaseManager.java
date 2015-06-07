@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.oshin.helloandroid.domain.Usuario;
 
@@ -216,16 +217,23 @@ public class DataBaseManager {
     }
 
     public Usuario getUsuario (String username, String password){
-        String query = "Select usuarioId, username, password from Usuario where username ='"+username+"' and password = '"+password+"'";
-        Usuario myUser = new Usuario(username,password);
-        Cursor cursor = db.rawQuery(query, null);
-        if (cursor.moveToFirst()){
-            do {
-                myUser.setUsername(cursor.getString(0));
-                myUser.setPassword(cursor.getString(1));
-            } while (cursor.moveToNext());
+        try {
+            String query = "Select idUsuario, username, password from Usuario where username ='" + username + "' and password = '" + password + "'";
+            Usuario myUser = new Usuario(username, password);
+            Cursor cursor = db.rawQuery(query, null);
+            if (cursor.moveToFirst()) {
+                do {
+                    myUser.setUsername(cursor.getString(0));
+                    myUser.setPassword(cursor.getString(1));
+                } while (cursor.moveToNext());
+            }
+            return myUser;
+        }catch (Exception e){
+            Log.d("getUsuario", "excepcion");
+
+            e.printStackTrace();
         }
-        return myUser;
+        return null;
     }
 
 

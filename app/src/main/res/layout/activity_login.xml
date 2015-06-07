@@ -1,71 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="@drawable/cool_background_1">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ff7986cb">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Contraseña:"
-            android:id="@+id/pass_l"
-            android:layout_gravity="left|center_vertical"
-            android:layout_weight="0.03"
-            android:layout_marginBottom="60dp"
-            android:layout_marginLeft="20dp" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="¿No tienes una cuenta aun?"
+            android:id="@+id/textView4"
+            android:layout_gravity="left|bottom"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="20dp" />
 
-        <EditText
-            android:layout_width="185dp"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/userInput"
-            android:layout_gravity="center_horizontal|top"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="20dp" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/link_create_account"
+            android:autoLink="web"
+            android:id="@+id/link_create_account"
+            android:linksClickable="true"
+            android:layout_gravity="right|bottom"
+            android:clickable="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="60dp" />
+
+        <Button
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:text="Iniciar Sesión"
+            android:id="@+id/login"
+            android:layout_gravity="left|bottom"
+            android:layout_marginBottom="140dp"
+            android:layout_marginLeft="70dp" />
 
         <EditText
-            android:layout_width="182dp"
+            android:layout_width="258dp"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/passInput"
             android:layout_gravity="center"
-            android:layout_marginBottom="60dp"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="10dp"
+            android:hint="@string/password_hint"
+            android:layout_marginTop="40dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Usuario:"
-            android:id="@+id/usuario_l"
-            android:layout_weight="0.03"
-            android:layout_gravity="left|top"
-            android:layout_marginTop="120dp"
-            android:layout_marginLeft="40dp" />
-
-        <Button
-            android:layout_width="wrap_content"
+        <EditText
+            android:layout_width="255dp"
             android:layout_height="wrap_content"
-            android:text="Iniciar Sesión"
-            android:id="@+id/login"
-            android:layout_gravity="left|bottom"
-            android:layout_marginBottom="200dp"
-            android:layout_marginLeft="130dp" />
+            android:id="@+id/userInput"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:hint="@string/username_hint"
+            android:layout_marginBottom="20dp" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="258dp"
             android:layout_height="wrap_content"
             android:text="Crear Cuenta"
             android:id="@+id/crear"
-            android:layout_gravity="left|bottom"
-            android:layout_marginBottom="120dp"
-            android:layout_marginLeft="130dp" />
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="10dp" />
 
 
     </FrameLayout>
 
-</LinearLayout>
+</RelativeLayout>
